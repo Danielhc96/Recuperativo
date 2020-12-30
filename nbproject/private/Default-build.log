@@ -1,0 +1,5 @@
+rm -fr *.o a.out programa dist build
+mkdir -p build dist
+mpic++ -g3 -Wall -c main.cpp -o build/main.o
+mpic++ -g3 -Wall -lm -lmpi -o dist/programa build/main.o
+rm -fr build
